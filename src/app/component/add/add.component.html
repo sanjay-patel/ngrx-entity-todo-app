@@ -1,0 +1,28 @@
+
+    
+    
+    <div class="mt-5">
+        <div class="col-md-8">
+            <form name="addTodoForm" #addTodoForm="ngForm" (ngSubmit)="onSubmitAddForm(addTodoForm);" novalidat>
+                <fieldset>    	
+    				<legend class="text-info">Add Todo</legend>
+                    <div class="form-group">
+                        <label for="title">Todo Title</label>
+                        <input type="text" class="form-control" #title="ngModel" name="title" id="title" [(ngModel)]="todo.title" placeholder="Enter todo title" required >
+                        <div [hidden]="title.valid || (title.pristine && !addTodoForm.submitted)" class="text-danger">
+                            Todo title is required.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Todo Description</label>
+                        <textarea class="form-control" #description="ngModel" rows="7" name="description" id="description" [(ngModel)]="todo.description" placeholder="Enter description" required ></textarea>
+                        <div [hidden]="description.valid || (description.pristine && !addTodoForm.submitted)" class="text-danger">
+                            Todo description is required.
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-info">Save</button>
+                </fieldset>				
+            </form>
+        </div>
+    </div>
+   

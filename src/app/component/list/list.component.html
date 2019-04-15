@@ -1,0 +1,33 @@
+    
+    
+    
+    <div class="mt-5">
+        <div class="col-md-12">
+            <fieldset>    	
+    				<legend class="text-info">List Todo</legend>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover">
+                            <thead>
+                                <tr class="table-primary">
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let todo of todoSub | async ; trackBy:trackByToodFun;"  >
+                                    <td scope="row">{{todo.id}}</td>
+                                    <td>{{todo.title}}</td>
+                                    <td>{{todo.description}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info mr-2" (click)="editRecord(todo.id)">Edit</button>
+                                        <button type="button" class="btn btn-danger" (click)="deleteRecord(todo.id)">Delete</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </fieldset>				
+        </div>
+    </div>
