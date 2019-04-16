@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
 ## Blog
-Please check more detail on our blog http://www.teclogiq.com/blog/todo-angular-app-using-ngrx-entity/
+Please check more detail on our blog <a target="_blank" href="http://www.teclogiq.com/blog/todo-angular-app-using-ngrx-entity/">todo-angular-app-using-ngrx-entity</a> 
 
 ## Development server
 
